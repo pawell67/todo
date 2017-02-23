@@ -1,127 +1,153 @@
-body{
-  background:#f0f0f0;
+body {
+    background: #f0f0f0;
 }
 
-
-.row{
-  align-items: center;
-  vertical-align: middle;
-  text-align: center;
-  background-color: #39ac73;
-  width:100%;
-  height: 50px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  padding-top:5px;
+.row {
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #39ac73;
+    width: 100%;
+    height: 50px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-top: 5px;
 }
 
-.row input#add{
-padding:5px 5px 5px 18px;
-font-size:16px;
-margin:5px;
-border-radius: 5px;
-min-width: 60%;
+.row input#add {
+    padding: 5px 5px 5px 18px;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 5px;
+    min-width: 60%;
 }
 
-ul{
-  list-style-type: none;
-  align-items: center;
-  vertical-align: middle;
-  text-align: center;
+.row span {
+    color: #000;
 }
 
-li{
-  border:1px solid black;
-  font-size: 2rem;
-  background-color: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 25px;
-  width:90%;
-  margin: 15px 5% 15px 5%;
-  float:right;
-  padding:5px 10px;
-  text-align: left;
+ul {
+    list-style-type: none;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
 }
 
-.remove{
-  width: 50px;
-height: 50px;
-float: left;
-background: none;
-position: relative;
-border: 0px;
-box-shadow: none;
-outline: none;
-cursor: pointer;
--webkit-appearance: none;
+li {
+    border: 1px solid black;
+    font-size: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    width: 90%;
+    margin: 15px 5% 15px 5%;
+    float: right;
+    padding: 5px 10px;
+    text-align: left;
 }
 
-.complete{
-  width: 50px;
-height: 50px;
-float: left;
-background: none;
-position: relative;
-border: 0px;
-box-shadow: none;
-outline: none;
-cursor: pointer;
--webkit-appearance: none;
+.remove {
+    width: 50px;
+    height: 50px;
+    float: left;
+    background: none;
+    position: relative;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.complete {
+    width: 50px;
+    height: 50px;
+    float: left;
+    background: none;
+    position: relative;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
 }
 
 button.remove svg .fill {
-  fill: #c0cecb;
+    fill: #c0cecb;
 }
 
 button.remove:hover svg .fill {
-  fill: #e85656;
+    fill: #e85656;
 }
 
 button.complete svg .fill {
-  fill: #25b99a;
+    fill: #25b99a;
+}
+
+button.complete:hover svg .fill {
+    fill: #fff;
+    background-color: #25b99a;
+}
+
+button.complete:hover svg .noFill {
+    fill: #25b99a;
+}
+
+#completed button.complete svg .fill {
+    fill: #fff;
+    background-color: #25b99a;
+}
+
+#completed button.complete svg .noFill {
+    fill: #25b99a;
+    border: 0;
+}
+
+#completed button.complete svg {
+    border: 0;
 }
 
 button svg .fill {
-  transition: fill 0.2s ease;
+    transition: fill 0.2s ease;
 }
 
 button svg .fill {
-  fill: #25b99a;
+    fill: #25b99a;
 }
 
 .noFill {
-  fill: none;
+    fill: none;
 }
 
-button{
-border: 0px;
-background-color:#ffffff;
+button {
+    border: 0px;
+    background-color: #ffffff;
 }
 
-button#add-button{
-position: inherit;
-border-radius: 15px;
-border: 11px solid #26734d;
-color: #ffffff;
-background-color: #26734d;
-display: inline;
+button#add-button {
+    position: inherit;
+    border-radius: 15px;
+    border: 11px solid #26734d;
+    color: #ffffff;
+    background-color: #26734d;
+    display: inline;
 }
 
-button.complete{
-  display: inline-block;
-  position: relative;
-  top:0;
-  right:0;
+button.complete {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    right: 0;
 }
 
 svg {
-  width: 22px;
-  height: 22px;
-  position:relative;
+    width: 22px;
+    height: 22px;
+    position: relative;
 }
 
 .complete svg {
-  border-radius: 11px;
-  border: 1.5px solid #25b99a;
-  transition: background 0.2s ease;
+    border-radius: 11px;
+    border: 1.5px solid #25b99a;
+    transition: background 0.2s ease;
 }
