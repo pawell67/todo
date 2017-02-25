@@ -2,27 +2,51 @@ var removeSVG = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xli
 var completeSVG = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 22" style="enable-background:new 0 0 22 22;" xml:space="preserve"><rect y="0" class="noFill" width="22" height="22"/><g><path class="fill" d="M9.7,14.4L9.7,14.4c-0.2,0-0.4-0.1-0.5-0.2l-2.7-2.7c-0.3-0.3-0.3-0.8,0-1.1s0.8-0.3,1.1,0l2.1,2.1l4.8-4.8c0.3-0.3,0.8-0.3,1.1,0s0.3,0.8,0,1.1l-5.3,5.3C10.1,14.3,9.9,14.4,9.7,14.4z"/></g></svg>';
 
 
-var span = document.createElement("span");
-
-var textTodo = document.createTextNode("There's no tasks to do!");
-var textComplete = document.createTextNode("There's no completed tasks!");
-span.appendChild(textTodo);
-
-
 var todo = document.getElementById('todo');
-todo.insertBefore(span, todo.childNodes[0]);
-console.log(todo.childNodes.length);
-console.log(todo.length);
+var completed = document.getElementById('completed');
+
+var spanTodo = document.createElement("span");
+var textTodo = document.createTextNode("There's no tasks to do!");
+spanTodo.setAttribute('id', 'noTask');
+spanTodo.appendChild(textTodo);
+todo.insertBefore(spanTodo, todo.childNodes[0]);
+var noTodo = document.getElementById('noTask');
+
+var spanCompleted = document.createElement("span");
+var textComplete = document.createTextNode("There's no completed tasks!");
+spanCompleted.setAttribute('id', 'noCompleted');
+spanCompleted.appendChild(textComplete);
+completed.insertBefore(spanCompleted, completed.childNodes[0]);
+var noCompleted = document.getElementById('noCompleted');
+
+
+CheckList();
 
 function CheckList() {
-    span.setAttribute('id', 'noTask');
-    var noTask=document.getElementById('noTask');
-    if (todo.childNodes.length === 1) {
-        todo.insertBefore(span, todo.childNodes[0]);
-        noTask.setAttribute('class', '');
-    } else if (todo.childNodes.length > 1) {
-        noTask.setAttribute('class', 'hidden');
+    function checkTodo() {
+
+
+        if (todo.childNodes.length === 1) {
+            noTodo.setAttribute('class', '');
+        } else if (todo.childNodes.length > 1) {
+            noTodo.setAttribute('class', 'hidden');
+        }
     }
+
+    checkTodo();
+
+    function checkCompleted() {
+
+
+        if (completed.childNodes.length === 1) {
+            completed.insertBefore(spanCompleted, completed.childNodes[0]);
+            noCompleted.setAttribute('class', '');
+        } else if (completed.childNodes.length > 1) {
+            noCompleted.setAttribute('class', 'hidden');
+        }
+    }
+
+    checkCompleted()
 }
 
 
@@ -49,7 +73,7 @@ function completeItem() {
 }
 
 function newElement() {
-    spa = document.createElement("span");
+    var spa = document.createElement("span");
     var li = document.createElement("li");
     var inputs = document.getElementById('add');
     var t = document.createTextNode(inputs.value);

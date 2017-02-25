@@ -26,7 +26,7 @@ body {
     color: #000;
 }
 
-.divider{
+.divider {
     text-align: center;
 }
 
@@ -37,8 +37,11 @@ ul {
     text-align: center;
 }
 
+ul > span{
+
+}
+
 li {
-    border: 1px solid black;
     font-size: 2rem;
     background-color: #ffffff;
     border: 1px solid #ffffff;
@@ -48,6 +51,11 @@ li {
     float: right;
     padding: 5px 10px;
     text-align: left;
+}
+
+li span{
+    position: relative;
+    top:4px;
 }
 
 .remove {
@@ -111,7 +119,7 @@ button.complete:hover svg .noFill {
     border: 0;
 }
 
-#completed p{
+#completed li span {
     text-decoration: line-through;
 }
 
@@ -160,6 +168,11 @@ svg {
     transition: background 0.2s ease;
 }
 
-.hidden{
-    display:none;
+.hidden {
+    display: none;
+}
+
+#noTodo,
+#noCompleted {
+    padding: 10px;
 }
