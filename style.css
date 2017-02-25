@@ -64,7 +64,7 @@ li span{
     float: left;
     background: none;
     position: relative;
-    border: 0px;
+    border: 0;
     box-shadow: none;
     outline: none;
     cursor: pointer;
@@ -77,7 +77,7 @@ li span{
     float: left;
     background: none;
     position: relative;
-    border: 0px;
+    border: 0;
     box-shadow: none;
     outline: none;
     cursor: pointer;
@@ -107,7 +107,11 @@ button.complete:hover svg .noFill {
 
 #completed button.complete svg .fill {
     fill: #fff;
-    background-color: #25b99a;
+}
+
+#completed button.complete svg:hover .noFill {
+    fill:red;
+    transition: fill 0.2s ease;
 }
 
 #completed button.complete svg .noFill {
@@ -136,7 +140,7 @@ button svg .fill {
 }
 
 button {
-    border: 0px;
+    border: 0;
     background-color: #ffffff;
 }
 
@@ -164,10 +168,15 @@ svg {
 
 .complete svg {
     border-radius: 11px;
-    border: 1.5px solid #25b99a;
+    border: 1px solid #25b99a;
     transition: background 0.2s ease;
 }
 
+#todo .complete:hover svg   {
+border:0;
+    transition: all 0.2s ease;
+    fill:#25b99a;
+}
 .hidden {
     display: none;
 }
